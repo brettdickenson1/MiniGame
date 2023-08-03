@@ -14,10 +14,10 @@ const StartGameScreen = () => {
       />
       <View style={styles.buttonStyle}>
         <View style={styles.buttonSingle}>
-          <PrimaryButton>Reset</PrimaryButton>
+          <PrimaryButton>Confirm</PrimaryButton>
         </View>
         <View style={styles.buttonSingle}>
-          <PrimaryButton>Confirm</PrimaryButton>
+          <PrimaryButton>Reset</PrimaryButton>
         </View>
       </View>
     </View>
