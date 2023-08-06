@@ -10,6 +10,7 @@ export default InstructionsText;
 
 const styles = StyleSheet.create({
   instructionTexts: {
+    fontFamily: "open-sans-bold",
     color: Colors.midBlue,
     fontSize: 24,
   },
