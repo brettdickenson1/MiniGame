@@ -46,34 +46,34 @@ const StartGameScreen = ({ onPickNumber }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.rootContainer}>
-      <KeyboardAvoidingView style={styles.rootContainer} behavior="position">
-        <View style={[styles.rootContainer, { marginTop: marginTopDistance }]}>
-          <Title>Guess My Number</Title>
-          <Card>
-            {/* <Text style={styles.instructionText}>Enter A Number</Text> */}
-            <InstructionsText>Enter A Number</InstructionsText>
-            <TextInput
-              style={styles.numberInput}
-              maxLength={2}
-              keyboardType="number-pad"
-              autoCapitilize="none"
-              autoCorrect={false}
-              onChangeText={numberInputHandler}
-              value={enteredNumber}
-            />
-            <View style={styles.buttonStyle}>
-              <View style={styles.buttonSingle}>
-                <PrimaryButton onPress={confirmInputHandler}>
-                  Confirm
-                </PrimaryButton>
-              </View>
-              <View style={styles.buttonSingle}>
-                <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
-              </View>
+      {/* <KeyboardAvoidingView style={styles.rootContainer} behavior="position"> */}
+      <View style={[styles.rootContainer, { marginTop: marginTopDistance }]}>
+        <Title>Guess My Number</Title>
+        <Card>
+          {/* <Text style={styles.instructionText}>Enter A Number</Text> */}
+          <InstructionsText>Enter A Number</InstructionsText>
+          <TextInput
+            style={styles.numberInput}
+            maxLength={2}
+            keyboardType="number-pad"
+            autoCapitilize="none"
+            autoCorrect={false}
+            onChangeText={numberInputHandler}
+            value={enteredNumber}
+          />
+          <View style={styles.buttonStyle}>
+            <View style={styles.buttonSingle}>
+              <PrimaryButton onPress={confirmInputHandler}>
+                Confirm
+              </PrimaryButton>
             </View>
-          </Card>
-        </View>
-      </KeyboardAvoidingView>
+            <View style={styles.buttonSingle}>
+              <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
+            </View>
+          </View>
+        </Card>
+      </View>
+      {/* </KeyboardAvoidingView> */}
     </ScrollView>
   );
 };
@@ -104,6 +104,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   buttonSingle: {
-    flex: 1,
+    // flex: 1,
   },
 });
